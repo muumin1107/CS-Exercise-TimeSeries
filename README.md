@@ -40,31 +40,8 @@
 ## 🚀 学習の進め方
 
 ### Step 1: 基礎編（01_tutorial）
-詳細は [`01_turorial/README.md`](./01_turorial/README.md) を参照してください。
+詳細は [`01_turorial/README.md`](./01_turorial/README.md) を参照してください．
 
 ### Step 2: 実践編（02_competition）
-詳細は [`02_competition/README.md`](./02_competition/README.md) を参照してください。
-
-## 💻 環境構築
-
-### 仮想環境の作成
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-
-# (.venv) hogehoge@dnnXX:~$のように表示されたら成功
-```
-
-### 必要なライブラリのインストール
-注意：仮想環境をアクティベートした状態で実行してください！
-
-```bash
-pip install -r requirements.txt
-```
-
-### カーネルの登録
-
-```bash
-python3 -m ipykernel install --user --name=.venv --display-name ".venv"
+詳細は [`02_competition/README.md`](./02_competition/README.md) を参照してください．
 ```
