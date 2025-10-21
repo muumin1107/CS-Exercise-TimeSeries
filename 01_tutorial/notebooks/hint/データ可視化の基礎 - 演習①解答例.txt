@@ -1,0 +1,13 @@
+# 営業時間内の平均客数を作成
+business_df = df[(df['Hour'] >= 7) & (df['Hour'] <= 21)]
+hourly_avg  = business_df.groupby('Hour')['Customers'].mean()
+
+# 可視化（棒グラフ）
+plt.figure(figsize=(15, 6))
+plt.bar(hourly_avg.index, hourly_avg.values, color='lightcoral', alpha=0.8, edgecolor='darkred')
+plt.title('Average Customer Count During Business Hours (7AM-9PM)', fontsize=16, fontweight='bold')
+plt.xlabel('Hour of Day')
+plt.ylabel('Average Number of Customers')
+plt.grid(True, alpha=0.3, axis='y')
+plt.tight_layout()
+plt.show()

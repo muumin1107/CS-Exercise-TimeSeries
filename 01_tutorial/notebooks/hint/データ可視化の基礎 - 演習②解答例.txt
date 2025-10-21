@@ -1,0 +1,12 @@
+plt.figure(figsize=(15, 6))
+# 各曜日の時間帯別平均を計算
+for day in df['WeekdayName'].unique():
+    day_data = df[df['WeekdayName'] == day].groupby('Hour')['Customers'].mean()
+    plt.plot(day_data.index, day_data.values, marker='o', linewidth=2, label=day, alpha=0.8)
+plt.title('Customer Patterns by Day of Week', fontsize=16, fontweight='bold')
+plt.xlabel('Hour of Day')
+plt.ylabel('Average Number of Customers')  
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()

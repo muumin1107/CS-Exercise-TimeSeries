@@ -1,0 +1,5 @@
+business_hours_df    = df[(df['Hour'] >= 7) & (df['Hour'] <= 21)].copy()   # 営業時間内(7:00-21:00)のデータを抽出
+business_hours_df    = business_hours_df.set_index('Timestamp')            # Timestampをインデックスに設定
+hourly_avg_customers = business_hours_df.resample('H')['Customers'].mean() # 1時間ごとの平均客数を計算
+
+print(hourly_avg_customers.head(24))
