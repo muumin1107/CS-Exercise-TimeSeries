@@ -11,11 +11,6 @@
 ├── README.md
 ├── 01_turorial/                # 基礎編：チュートリアル
 │   ├── README.md               # 基礎編の詳細説明
-│   ├── data/
-│   │   ├── raw/
-│   │   │   └── cafe_customers.csv
-│   │   └── processed/
-│   │       └── feature_engineered_data.csv
 │   └── notebooks/
 │       ├── 01_pandas_basics.ipynb          # 01.Pandasの基礎
 │       ├── 02_visualization_basics.ipynb   # 02.データ可視化の基礎
@@ -25,10 +20,6 @@
 |
 └── 02_competition/             # 実践編：コンペティション
     ├── README.md               # 実践編の詳細説明
-    ├── data/
-    │   └── raw/
-    │       ├── attendance_data.csv
-    │       └── calendar_data.csv
     ├── notebooks/
     │   ├── analysis_report.ipynb
     │   └── hint/
