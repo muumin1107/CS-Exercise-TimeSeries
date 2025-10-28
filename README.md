@@ -44,4 +44,3 @@
 
 ### Step 2: 実践編（02_competition）
 詳細は [`02_competition/README.md`](https://github.com/muumin1107/CS-Exercise-TimeSeries/tree/main/02_competition) を参照してください．
-```
