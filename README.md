@@ -9,17 +9,20 @@
 ```
 CS-Exercise-TimeSeries/
 ├── README.md
-├── 01_turorial/                # 基礎編：チュートリアル
-│   ├── README.md               # 基礎編の詳細説明
+|
+|   # 基礎編：チュートリアル
+├── 01_turorial/
+│   ├── README.md
 │   └── notebooks/
-│       ├── 01_pandas_basics.ipynb          # 01.Pandasの基礎
-│       ├── 02_visualization_basics.ipynb   # 02.データ可視化の基礎
-│       ├── 03_time_series_features.ipynb   # 03.特徴量エンジニアリング
-│       ├── 04_prediction_model.ipynb       # 04.予測モデルの構築
+│       ├── 01_pandas_basics.ipynb
+│       ├── 02_visualization_basics.ipynb
+│       ├── 03_time_series_features.ipynb
+│       ├── 04_prediction_model.ipynb
 │       └── hint/
 |
-└── 02_competition/             # 実践編：コンペティション
-    ├── README.md               # 実践編の詳細説明
+|   # 実践編：コンペティション
+└── 02_competition/
+    ├── README.md
     ├── notebooks/
     │   ├── analysis_report.ipynb
     │   └── hint/
