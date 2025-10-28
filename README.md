@@ -40,8 +40,8 @@
 ## 🚀 学習の進め方
 
 ### Step 1: 基礎編（01_tutorial）
-詳細は [`01_turorial/README.md`](./01_turorial/README.md) を参照してください．
+詳細は [`01_turorial/README.md`](https://github.com/muumin1107/CS-Exercise-TimeSeries/tree/main/01_tutorial) を参照してください．
 
 ### Step 2: 実践編（02_competition）
-詳細は [`02_competition/README.md`](./02_competition/README.md) を参照してください．
+詳細は [`02_competition/README.md`](https://github.com/muumin1107/CS-Exercise-TimeSeries/tree/main/02_competition) を参照してください．
 ```
