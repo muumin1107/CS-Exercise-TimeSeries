@@ -7,7 +7,7 @@
 ## 📁 ディレクトリ構成
 
 ```
-情報科学演習2025/
+CS-Exercise-TimeSeries/
 ├── README.md
 ├── 01_turorial/                # 基礎編：チュートリアル
 │   ├── README.md               # 基礎編の詳細説明
