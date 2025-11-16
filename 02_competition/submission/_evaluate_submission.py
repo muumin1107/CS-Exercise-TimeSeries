@@ -2,10 +2,10 @@ import requests
 import os
 
 # 評価APIサーバーのアドレス
-API_URL = "http://XXX.XXX.XXX.XXX:XXXX/evaluate"
+API_URL = "http://172.16.15.111:5000/evaluate"
 
 # 提出するCSVファイル名
-SUBMISSION_FILE = "test_submission.csv"
+SUBMISSION_FILE = "submission.csv"
 
 def submit_for_evaluation():
     """
