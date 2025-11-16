@@ -85,7 +85,7 @@
 なお、比較できる**正解データは1週間分の期間のみ**のため、全てのテスト期間に対する評価結果ではありません。
 
 ```text
-CS-Exercise-TimeSeries\02_competition\submission> python .\_evaluate_submission.py
+~/workspace/02_competition/submission$ python3 _evaluate_submission.py
 ==============================
 ✅ 評価結果 (Success)
 ------------------------------
