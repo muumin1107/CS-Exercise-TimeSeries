@@ -38,7 +38,7 @@ def submit_for_evaluation():
             # JSONデコードに失敗した場合 (例: 500エラーでHTMLが返る)
             json_response = None
 
-        print("\n" + "="*30)
+        print("="*30)
         
         if response.status_code == 200 and json_response:
             # 成功時 (200 OK)
