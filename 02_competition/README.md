@@ -14,13 +14,13 @@
 
 ## 📚データセット
 本コンペティションでは、以下の2つのデータセットを使用します。
-- `attendance_data.csv`: 研究室メンバーの在室記録
+- `attendance_trainval_data.csv`: 過去4ヵ月分の研究室メンバーの在室記録
     - `Date`: 日付（yyyy-mm-dd形式）
     - `Timestamp`: タイムスタンプ（ISO 8601形式）
     - `Name`: メンバー名
     - `Status`: メンバーのステータス（`clock_in`, `break_in`, `break_out`、`clock_out`の4状態）
 
-- `calendar_data.csv`: 研究室の共有カレンダーの予定
+- `calendar_trainval_data.csv`: 在室記録と同様の期間における研究室の共有カレンダーの予定
     - `Date`: 日付（yyyy-mm-dd形式）
     - `StartTime`: 開始時刻（HH:MM:SS形式）
     - `EndTime`: 終了時刻（HH:MM:SS形式）
@@ -28,8 +28,8 @@
 
 - `attendance_test_data.csv`: 予測すべき時刻情報
     - `Timestamp`: 予測対象のタイムスタンプ（ISO 8601形式）
-- `calendar_test_data.csv`: 予測対象期間のカレンダー予定
-    - 形式は`calendar_data.csv`と同様
+- `calendar_test_data.csv`: 予測対象期間における研究室の共有カレンダーの予定
+    - 形式は`calendar_trainval_data.csv`と同様
 
 ※「在室期間」は`clock_in`後、次に`clock_out`するまでの期間であり、`break_in`後、次に`break_out`もしくは`clock_in`するまでの期間は含まないものとする。
 
@@ -72,7 +72,7 @@
 💡ヒント：生データのままでは「人数」を予測するデータとしては不適なため、適切な前処理が必要
 
 ### 🔥発展課題（任意）：カレンダー情報を活用した未来の在室人数予測
-予測対象期間のカレンダー情報（`calendar_test_data.csv`）を特徴量として活用し、課題②で構築したモデルの精度向上を試行してください。
+カレンダー情報（`calendar_trainval_data.csv`や`calendar_test_data.csv`）を特徴量として活用し、課題②で構築したモデルの精度向上を試行してください。
 
 - **予測対象:** 課題②と同様
 - **評価指標:** 課題②と同様
@@ -82,7 +82,7 @@
 
 ### テストデータの評価方法について
 `submission`ディレクトリの`_evaluate_submission.py`を実行すると、`submission.csv`に保存されている予測結果を正解データと比較して評価した結果が確認できます。
-なお、評価できる期間は、**1週間：2025-11-13 00:00～2025-11-19 23:00 のみ**のため、全てのテスト期間に対する評価結果ではありません。
+なお、評価対象となる期間は`submission.csv`の期間に関わらず、**1週間：2025-11-13 00:00～2025-11-19 23:00 のみ**のため、全てのテスト期間に対する評価結果ではないことに注意してください。
 
 ```text
 ~/workspace/02_competition/submission$ python3 _evaluate_submission.py
