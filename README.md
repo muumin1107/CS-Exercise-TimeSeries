@@ -27,8 +27,7 @@ CS-Exercise-TimeSeries/
     │   ├── analysis_report.ipynb
     │   └── hint/
     └── submission/
-        ├── submission.csv
-        └── submission_advanced.csv
+        └── submission.csv
 ```
 
 ## 🚀 学習の進め方
