@@ -1,4 +1,15 @@
-df['IsWeekend'] = df['DayOfWeek'].isin([5, 6])                                      # 土日：True、平日：False
-hourly_by_daytype = df.groupby(['Hour', 'IsWeekend'])['Customers'].mean().unstack() # 平日(False)と週末(True)の列ができる
+import pandas as pd
 
-print(hourly_by_daytype)
+# データの読み込みと前処理
+df = pd.read_csv('../data/raw/cafe_customers.csv')
+df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+df['Hour'] = df['Timestamp'].dt.hour
+df['DayOfWeek'] = df['Timestamp'].dt.dayofweek
+df['IsWeekend'] = df['DayOfWeek'].isin([5, 6])
+df['DayType'] = df['IsWeekend'].map({True: 'Weekend', False: 'Weekday'})
+
+# 平日と週末それぞれの時間帯別平均客数を計算
+comparison = df.groupby(['DayType', 'Hour'])['Customers'].mean().unstack(level=0)
+
+print("平日と週末の時間帯別平均客数:")
+print(comparison)
